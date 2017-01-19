@@ -49,6 +49,27 @@
     <Compile Include="Adres.cs" />
     <Compile Include="Bestelling.cs" />
     <Compile Include="DataAccesLayer\Connection.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IAdresContext.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IBestellingContext.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IBodemContext.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IIngredientContext.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IKlantContext.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IPizzaContext.cs" />
+    <Compile Include="DataAccesLayer\ContextInterfaces\IProductContext.cs" />
+    <Compile Include="DataAccesLayer\Repository\AdresRepo.cs" />
+    <Compile Include="DataAccesLayer\Repository\BestellingRepo.cs" />
+    <Compile Include="DataAccesLayer\Repository\BodemRepo.cs" />
+    <Compile Include="DataAccesLayer\Repository\IngredientRepo.cs" />
+    <Compile Include="DataAccesLayer\Repository\KlantRepo.cs" />
+    <Compile Include="DataAccesLayer\Repository\PizzaRepo.cs" />
+    <Compile Include="DataAccesLayer\Repository\ProductRepo.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\AdresSql.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\BestellingSql.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\BodemSql.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\IngredientSql.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\KlantSql.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\PizzaSql.cs" />
+    <Compile Include="DataAccesLayer\SQLContext\ProductSql.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +112,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataAccesLayer\ContextInterfaces\" />
-    <Folder Include="DataAccesLayer\Repository\" />
-    <Folder Include="DataAccesLayer\SQLContext\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
