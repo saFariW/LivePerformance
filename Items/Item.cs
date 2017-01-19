@@ -27,7 +27,7 @@ namespace LivePerformance
 
         public int CompareTo(Item other)
         {
-            throw new NotImplementedException();
+            return Beschrijving.CompareTo(other.Beschrijving);
         }
 
         public override string ToString()

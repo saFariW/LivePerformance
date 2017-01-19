@@ -34,6 +34,10 @@ namespace LivePerformance
             AchterNaam = achterNaam;
         }
 
+        public Klant()
+        {
+        }
+
         public override string ToString()
         {
             return base.ToString();

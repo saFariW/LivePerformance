@@ -16,7 +16,7 @@ namespace LivePerformance.DataAccesLayer.Repository
             _context = context;
         }
 
-        List<Product> HaalAlleProducten()
+        public List<Product> HaalAlleProducten()
         {
             return _context.HaalAlleProducten();
         }
