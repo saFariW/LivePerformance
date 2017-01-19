@@ -8,11 +8,8 @@ namespace LivePerformance.Items
 {
     class Bodem : Item
     {
-        public int BodemNr { get; set; }
-
-        public Bodem(int bodemNr)
+        public Bodem(int artikkelNr, string beschrijving, decimal kPrijs, decimal vPrijs) : base(artikkelNr, beschrijving, kPrijs, vPrijs)
         {
-            BodemNr = bodemNr;
         }
 
         public override string ToString()

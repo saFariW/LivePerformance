@@ -8,7 +8,7 @@ namespace LivePerformance.DataAccesLayer
 {
     class Connection
     {
-        public string ConnectionString { get; set; }
+        public string ConnectionString { get; }
         public Connection()
         {
             // connection string

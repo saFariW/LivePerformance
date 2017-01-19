@@ -13,6 +13,14 @@ namespace LivePerformance
         public decimal KPrijs { get; set; }
         public decimal VPrijs { get; set; }
 
+        protected Item(int artikkelNr, string beschrijving, decimal kPrijs, decimal vPrijs)
+        {
+            ArtikkelNr = artikkelNr;
+            Beschrijving = beschrijving;
+            KPrijs = kPrijs;
+            VPrijs = vPrijs;
+        }
+
         public int CompareTo(Item other)
         {
             throw new NotImplementedException();

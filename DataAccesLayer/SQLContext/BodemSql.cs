@@ -10,6 +10,14 @@ namespace LivePerformance.DataAccesLayer.SQLContext
 {
     class BodemSql : IBodemContext
     {
+        private string _connString;
+
+        public BodemSql()
+        {
+            Connection connection = new Connection();
+            _connString = connection.ConnectionString;
+        }
+
         public List<Bodem> HaalAllenBodems()
         {
             throw new NotImplementedException();

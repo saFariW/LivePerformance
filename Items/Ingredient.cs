@@ -8,13 +8,11 @@ namespace LivePerformance.Items
 {
     class Ingredient : Item
     {
-        public int IngredientNr { get; set; }
         public bool Halal { get; set; }
         public bool Vega { get; set; }
 
-        public Ingredient(int ingredientNr, bool halal, bool vega)
+        public Ingredient(int artikkelNr, string beschrijving, decimal kPrijs, decimal vPrijs, bool halal, bool vega) : base(artikkelNr, beschrijving, kPrijs, vPrijs)
         {
-            IngredientNr = ingredientNr;
             Halal = halal;
             Vega = vega;
         }

@@ -8,12 +8,9 @@ namespace LivePerformance
 {
     class Product : Item
     {
-        public int ProductNr { get; set; }
         public bool Alcohol { get; set; }
-
-        public Product(int productNr, bool alcohol)// : base (artikkelNr, beschrijving, kPrijs, vPrijs)
+        public Product( int artikkelNr, string beschrijving, decimal kPrijs, decimal vPrijs, bool alcohol) : base(artikkelNr, beschrijving, kPrijs, vPrijs)
         {
-            ProductNr = productNr;
             Alcohol = alcohol;
         }
     }

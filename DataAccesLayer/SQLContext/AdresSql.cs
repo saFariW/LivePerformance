@@ -9,7 +9,14 @@ namespace LivePerformance.DataAccesLayer.SQLContext
 {
     class AdresSql : IAdresContext
     {
-        public bool MaakAdres(string category)
+        private string _connString;
+        public AdresSql()
+        {
+            Connection connection = new Connection();
+            _connString = connection.ConnectionString;
+        }
+
+        public bool MaakAdres(string straat, int huisNummer, string woonplaats)
         {
             throw new NotImplementedException();
         }

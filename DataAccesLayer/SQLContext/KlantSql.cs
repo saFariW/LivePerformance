@@ -9,6 +9,12 @@ namespace LivePerformance.DataAccesLayer.SQLContext
 {
     class KlantSql : IKlantContext
     {
+        private string _connString;
+        public KlantSql()
+        {
+            Connection connection = new Connection();
+            _connString = connection.ConnectionString;
+        }
         public bool MaakKlant(int adresNr, int klantNr, string email, string voorNaam, string tussenVoegsel, string achterNaam)
         {
             throw new NotImplementedException();

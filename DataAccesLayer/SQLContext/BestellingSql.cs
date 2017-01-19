@@ -9,6 +9,13 @@ namespace LivePerformance.DataAccesLayer.SQLContext
 {
     class BestellingSql :IBestellingContext
     {
+        private string _connString;
+        public BestellingSql()
+        {
+            Connection connection = new Connection();
+            _connString = connection.ConnectionString;
+        }
+
         public bool MaakBestelling(List<Item> items, int bestellingNr, Status status, DateTime besteld)
         {
             throw new NotImplementedException();

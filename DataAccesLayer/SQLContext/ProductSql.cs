@@ -10,6 +10,14 @@ namespace LivePerformance.DataAccesLayer.SQLContext
 {
     class ProductSql : IProductContext
     {
+        private string _connString;
+
+        public ProductSql()
+        {
+            Connection connection = new Connection();
+            _connString = connection.ConnectionString;
+        }
+
         public List<Product> HaalAlleProducten()
         {
             throw new NotImplementedException();

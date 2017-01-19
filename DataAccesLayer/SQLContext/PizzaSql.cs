@@ -10,6 +10,13 @@ namespace LivePerformance.DataAccesLayer.SQLContext
 {
     class PizzaSql : IPizzaContext
     {
+        private string _connString;
+        public PizzaSql()
+        {
+            Connection connection = new Connection();
+            _connString = connection.ConnectionString;
+        }
+
         public bool MaakPizza(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat)
         {
             throw new NotImplementedException();
