@@ -21,7 +21,7 @@ namespace LivePerformance.DataAccesLayer.Repository
             return _context.MaakKlant(adresNr, klantNr, email, voorNaam, tussenVoegsel, achterNaam);
         }
 
-        List<Klant> HaalAllenKlanten()
+        public List<Klant> HaalAllenKlanten()
         {
             return _context.HaalAllenKlanten();
         }

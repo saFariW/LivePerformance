@@ -17,7 +17,7 @@ namespace LivePerformance.DataAccesLayer.Repository
             _context = context;
         }
 
-        List<Bodem> HaalAllenBodems()
+        public List<Bodem> HaalAllenBodems()
         {
             return _context.HaalAllenBodems();
         }

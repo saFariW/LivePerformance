@@ -17,7 +17,7 @@ namespace LivePerformance.DataAccesLayer.Repository
             _context = context;
         }
 
-        List<Ingredient> HaalAllenIngredienten()
+        public List<Ingredient> HaalAllenIngredienten()
         {
             return _context.HaalAllenIngredienten();
         }

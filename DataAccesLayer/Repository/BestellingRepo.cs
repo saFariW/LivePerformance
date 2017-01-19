@@ -16,17 +16,17 @@ namespace LivePerformance.DataAccesLayer.Repository
             _context = context;
         }
 
-        bool MaakBestelling(List<Item> items, int bestellingNr, Status status, DateTime besteld)
+        public bool MaakBestelling(List<Item> items, int bestellingNr, Status status, DateTime besteld)
         {
             return _context.MaakBestelling(items, bestellingNr, status, besteld);
         }
 
-        List<Bestelling> HaalAllenBestellingen()
+        public List<Bestelling> HaalAllenBestellingen()
         {
             return _context.HaalAllenBestellingen();
         }
 
-        List<Bestelling> HaalBestellingenVanKlant(int klantNr)
+        public List<Bestelling> HaalBestellingenVanKlant(int klantNr)
         {
             return _context.HaalBestellingenVanKlant(klantNr);
         }

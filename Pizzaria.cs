@@ -39,13 +39,19 @@ namespace LivePerformance
             _pizzaRepo = new PizzaRepo(new PizzaSql());
             _productRepo = new ProductRepo(new ProductSql());
 
+            //HaalBenodigdeInfoOp();
+        }
+
+        public void HaalBenodigdeInfoOp()
+        {
             try
             {
-                _productRepo.HaalAlleProducten();
+                Producten = _productRepo.HaalAlleProducten();
+                Ingredienten = _ingredientRepo.HaalAllenIngredienten();
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("het ophalen van de producten tijdens het opstarten ging fout : " + ex.Message);
+                Console.WriteLine("het ophalen van de gegevens die voor het programma van belang zijn tijdens het opstarten ging fout : " + ex.Message);
                 throw;
             }
         }

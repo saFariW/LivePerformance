@@ -17,22 +17,22 @@ namespace LivePerformance.DataAccesLayer.Repository
             _context = context;
         }
 
-        bool MaakPizza(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat)
+        public bool MaakPizza(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat)
         {
             return _context.MaakPizza(bodem, pizzaNr, vorm, oppervlak, formaat);
         }
 
-        bool MaakPizzaStandaard(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat)
+        public bool MaakPizzaStandaard(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat)
         {
             return _context.MaakPizzaStandaard(bodem, pizzaNr, vorm, oppervlak, formaat);
         }
 
-        List<Pizza> HaalTop3MeestBesteldePizzas()
+        public List<Pizza> HaalTop3MeestBesteldePizzas()
         {
             return _context.HaalTop3MeestBesteldePizzas();  
         }
 
-        List<Pizza> HaalStandaardPizzas()
+        public List<Pizza> HaalStandaardPizzas()
         {
             return _context.HaalStandaardPizzas();
         }

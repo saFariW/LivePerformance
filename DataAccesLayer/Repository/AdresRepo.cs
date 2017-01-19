@@ -16,16 +16,16 @@ namespace LivePerformance.DataAccesLayer.Repository
             _context = context;
         }
 
-        bool MaakAdres(string straat, int huisNummer, string woonplaats)
+        public bool MaakAdres(string straat, int huisNummer, string woonplaats)
         {
             return _context.MaakAdres(straat, huisNummer, woonplaats);
         }
-        List<Adres> HaalAdressenVanKlant(int klantNr)
+        public List<Adres> HaalAdressenVanKlant(int klantNr)
         {
             return _context.HaalAdressenVanKlant(klantNr);
         }
 
-        List<Adres> HaalAllenAdressen()
+        public List<Adres> HaalAllenAdressen()
         {
             return _context.HaalAllenAdressen();
         }
