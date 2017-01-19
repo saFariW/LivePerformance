@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IKlantContext
+    public interface IKlantContext
     {
-        bool MaakKlant(int adresNr, int klantNr, string email, string voorNaam, string tussenVoegsel, string achterNaam)
+        bool MaakKlant(int adresNr, int klantNr, string email, string voorNaam, string tussenVoegsel, string achterNaam);
         List<Klant> HaalAllenKlanten();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivePerformance.Items
 {
-    class Bodem : Item
+    public class Bodem : Item
     {
         public Bodem(int artikkelNr, string beschrijving, decimal kPrijs, decimal vPrijs) : base(artikkelNr, beschrijving, kPrijs, vPrijs)
         {

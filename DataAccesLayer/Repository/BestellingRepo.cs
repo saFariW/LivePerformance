@@ -7,9 +7,14 @@ using LivePerformance.DataAccesLayer.ContextInterfaces;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class BestellingRepo
+    public class BestellingRepo
     {
         private readonly IBestellingContext _context;
+
+        public BestellingRepo(IBestellingContext context)
+        {
+            _context = context;
+        }
 
         bool MaakBestelling(List<Item> items, int bestellingNr, Status status, DateTime besteld)
         {

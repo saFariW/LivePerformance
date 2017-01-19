@@ -7,7 +7,7 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IBodemContext
+    public interface IBodemContext
     {
         List<Bodem> HaalAllenBodems();
     }

@@ -7,7 +7,7 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IAdresContext
+    public interface IAdresContext
     {
         bool MaakAdres(string straat, int huisNummer, string woonplaats);
         List<Adres> HaalAdressenVanKlant(int klantNr);

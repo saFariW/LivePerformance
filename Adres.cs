@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivePerformance
 {
-    class Adres
+    public class Adres
     {
         public int AdresNr { get; set; }
         public string Straat { get; set; }

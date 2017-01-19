@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IBestellingContext
+    public interface IBestellingContext
     {
         bool MaakBestelling(List<Item> items, int bestellingNr, Status status, DateTime besteld);
         List<Bestelling> HaalAllenBestellingen();

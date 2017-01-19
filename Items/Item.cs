@@ -21,6 +21,10 @@ namespace LivePerformance
             VPrijs = vPrijs;
         }
 
+        protected Item()
+        {
+        }
+
         public int CompareTo(Item other)
         {
             throw new NotImplementedException();
@@ -28,7 +32,7 @@ namespace LivePerformance
 
         public override string ToString()
         {
-            return base.ToString();
+            return ArtikkelNr + " : " + Beschrijving + "     EURO : " + VPrijs;
         }
     }
 }

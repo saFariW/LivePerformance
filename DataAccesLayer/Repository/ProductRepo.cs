@@ -7,9 +7,14 @@ using LivePerformance.DataAccesLayer.ContextInterfaces;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class ProductRepo
+    public class ProductRepo
     {
         private readonly IProductContext _context;
+
+        public ProductRepo(IProductContext context)
+        {
+            _context = context;
+        }
 
         List<Product> HaalAlleProducten()
         {

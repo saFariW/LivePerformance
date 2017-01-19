@@ -8,9 +8,14 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class BodemRepo
+    public class BodemRepo
     {
         private readonly IBodemContext _context;
+
+        public BodemRepo(IBodemContext context)
+        {
+            _context = context;
+        }
 
         List<Bodem> HaalAllenBodems()
         {

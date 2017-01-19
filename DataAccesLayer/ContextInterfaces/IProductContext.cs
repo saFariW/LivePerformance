@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IProductContext
+    public interface IProductContext
     {
         List<Product> HaalAlleProducten();
     }

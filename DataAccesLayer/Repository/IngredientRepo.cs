@@ -8,9 +8,14 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class IngredientRepo
+    public class IngredientRepo
     {
         private readonly IIngredientContext _context;
+
+        public IngredientRepo(IIngredientContext context)
+        {
+            _context = context;
+        }
 
         List<Ingredient> HaalAllenIngredienten()
         {

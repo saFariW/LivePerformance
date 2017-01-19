@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivePerformance.Items
 {
-    class Ingredient : Item
+    public class Ingredient : Item
     {
         public bool Halal { get; set; }
         public bool Vega { get; set; }

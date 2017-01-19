@@ -7,7 +7,7 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IPizzaContext
+    public interface IPizzaContext
     {
         bool MaakPizza(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat);
         bool MaakPizzaStandaard(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat);

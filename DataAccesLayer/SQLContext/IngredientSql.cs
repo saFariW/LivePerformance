@@ -21,8 +21,7 @@ namespace LivePerformance.DataAccesLayer.SQLContext
         public List<Ingredient> HaalAllenIngredienten()
         {
             var ingredienten = new List<Ingredient>();
-            var QueryString =
-                "SELECT DISTINCT t.ID, t.Remise_ID_Standplaats, tt.Omschrijving, t.Nummer, t.Lengte, t.Status, t.Vervuild, t.Defect, t.ConducteurGeschikt, t.Beschikbaar, min(tl.Lijn_ID) AS lijn_ID FROM TRAM as t FULL OUTER JOIN TRAMTYPE as tt on tt.ID = t.Tramtype_ID FULL OUTER JOIN TRAM_LIJN as tl on t.ID = tl.Tram_ID GROUP BY t.ID, t.Remise_ID_Standplaats, tt.Omschrijving, t.Nummer, t.Lengte, t.Status, t.Vervuild, t.Defect, t.ConducteurGeschikt, t.Beschikbaar";
+            var QueryString ="select * from INGREDIENT";
             using (var conn = new SqlConnection(ConnString))
             {
                 using (var cmd = new SqlCommand(QueryString, conn))
@@ -38,13 +37,16 @@ namespace LivePerformance.DataAccesLayer.SQLContext
                     }
                 }
             }
-            throw new NotImplementedException();
+            return null;
         }
 
         private static Ingredient MaakIngredientFromReader(SqlDataReader reader)
         {
             return new Ingredient(
                 Convert.ToInt32(reader["IngredientNR"]),
+                Convert.ToString(reader["Omschrijving"]),
+                Convert.ToDecimal(reader["Kprijs"]),
+                Convert.ToDecimal(reader["VPrijs"]),
                 Convert.ToBoolean(reader["Halal"]),
                 Convert.ToBoolean(reader["Vega"]));
         }

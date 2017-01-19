@@ -8,9 +8,14 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class PizzaRepo
+    public  class PizzaRepo
     {
         private readonly IPizzaContext _context;
+
+        public PizzaRepo(IPizzaContext context)
+        {
+            _context = context;
+        }
 
         bool MaakPizza(Bodem bodem, int pizzaNr, Vorm vorm, decimal oppervlak, string formaat)
         {

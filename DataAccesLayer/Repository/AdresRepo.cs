@@ -7,9 +7,15 @@ using LivePerformance.DataAccesLayer.ContextInterfaces;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class AdresRepo
+    public class AdresRepo
     {
         private readonly IAdresContext _context;
+
+        public AdresRepo(IAdresContext context)
+        {
+            _context = context;
+        }
+
         bool MaakAdres(string straat, int huisNummer, string woonplaats)
         {
             return _context.MaakAdres(straat, huisNummer, woonplaats);

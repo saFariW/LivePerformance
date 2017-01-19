@@ -7,9 +7,14 @@ using LivePerformance.DataAccesLayer.ContextInterfaces;
 
 namespace LivePerformance.DataAccesLayer.Repository
 {
-    class KlantRepo
+    public class KlantRepo
     {
         private readonly IKlantContext _context;
+
+        public KlantRepo(IKlantContext context)
+        {
+            _context = context;
+        }
 
         bool MaakKlant(int adresNr, int klantNr, string email, string voorNaam, string tussenVoegsel, string achterNaam)
         {

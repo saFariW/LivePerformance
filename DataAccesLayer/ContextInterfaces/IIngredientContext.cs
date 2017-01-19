@@ -7,7 +7,7 @@ using LivePerformance.Items;
 
 namespace LivePerformance.DataAccesLayer.ContextInterfaces
 {
-    interface IIngredientContext
+    public interface IIngredientContext
     {
         List<Ingredient> HaalAllenIngredienten();
     }
